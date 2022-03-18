@@ -15,7 +15,7 @@ definition of multiplication as repeated addition
 e.g. 5 x 3 = 3 + 3 + 3 + 3 + 3
 e.g.
 if you want to solve five times three
-set a variable to 3 and increment itself by 3 5 times
+set a variable to 0 and increment itself by 3 5 times
 print('{} x {} = {}'.format(5, 3, 3 + 3 + 3 + 3 + 3))
 """
 
