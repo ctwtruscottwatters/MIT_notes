@@ -6,6 +6,30 @@ All my own work. Love recursion. Charles Thomas Wallace Truscott. Massachusetts 
 +6141533702
 ctwtruscottwatters@gmail.com
 
+runfile('C:/Users/17/Downloads/recur.py', wdir='C:/Users/17/Downloads')
+high: 9 low: 0 guess: 4 guessChar: j
+high: 5 low: 0 guess: 2 guessChar: t
+high: 3 low: 0 guess: 1 guessChar: v
+high: 2 low: 0 guess: 1 guessChar: y
+No character was found.
+
+runfile('C:/Users/17/Downloads/recur.py', wdir='C:/Users/17/Downloads')
+Character c was found at index 3
+
+runfile('C:/Users/17/Downloads/recur.py', wdir='C:/Users/17/Downloads')
+Character c was found at index 3
+
+runfile('C:/Users/17/Downloads/recur.py', wdir='C:/Users/17/Downloads')
+high: 10 low: 0 guess: 5 guessChar: i
+high: 5 low: 0 guess: 2 guessChar: x
+high: 2 low: 0 guess: 1 guessChar: y
+No character was found.
+
+runfile('C:/Users/17/Downloads/recur.py', wdir='C:/Users/17/Downloads')
+high: 10 low: 0 guess: 5 guessChar: i
+Character c was found at index 2
+
+
 """
 from sys import exit
 
@@ -29,4 +53,4 @@ def main(char, aStr):
     guesses += 1
     
     
-if __name__ == "__main__": main('z', 'abfijmtvy')
+if __name__ == "__main__": main('c', 'zyxcba')
