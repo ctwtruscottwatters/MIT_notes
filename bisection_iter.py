@@ -18,6 +18,8 @@ due 9:30 A.M. GMT + 10 AEST Australian Eastern Standard Time
 
 Authored 4:24 p.m. AEST Monday 27th of June in Spyder
 
+Into a copy of Knuth's Art of Computer Programming, includes bisection search and binary trees ... Turing complete
+
 """
 
 aStr = "hijklmnoqrstuxyz"
