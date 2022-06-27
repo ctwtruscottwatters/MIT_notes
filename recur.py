@@ -7,27 +7,26 @@ All my own work. Love recursion. Charles Thomas Wallace Truscott. Massachusetts 
 ctwtruscottwatters@gmail.com
 
 """
+from sys import exit
 
 def main(char, aStr):
     guesses = 0
-    high = len(aStr)
+    high = int(len(str(aStr)))
     low = 0
     guess = int((high + low) / 2.0)
-    print("high: {} low: {} guess: {} guessChar: {}".format(high, low, guess, aStr[guess]))
-    if high == 0 or guess == 0 or guess == len(aStr):
-        return False
-    if guesses >= len(aStr):
-        return False
-    if char > aStr[guess]:
-        low = guess
-        main(char, main(char, aStr[low:high]))
-    elif char < aStr[guess]:
-        high = guess
-        main(char, main(char, aStr[low:high]))
     if aStr[guess] == char:
         print("Character {} was found at index {}".format(aStr[guess], guess))
         return True
+    elif guesses > len(aStr) or guess == 0:
+        print("No character was found.")
+        return False
+    print("high: {} low: {} guess: {} guessChar: {}".format(high, low, guess, aStr[guess]))
+    if char > aStr[guess]:
+        low = guess
+    elif char < aStr[guess]:
+        high = guess
+    main(char, aStr[low:high])
     guesses += 1
     
     
-if __name__ == "__main__": main("k", "bcdefghijk")
+if __name__ == "__main__": main('z', 'abfijmtvy')
