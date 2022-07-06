@@ -1,0 +1,108 @@
+creating objects, classes of objects that you can define as a user 
+
+primitive sets of data objects
+
+	- integers
+
+	- floating point numbers
+
+	- strings
+
+	- lists
+
+	- dictionaries
+
+	- tuples
+
+(these are instances of objects)
+
+Every object has a type (an internal data representation)
+And associated with it, it has a set of procedures that allows you to interact with an instance of that object
+
+
+Creating the class is going to involve defining the name of the class so I can reference it
+
+It's going to involve defining the class attributes
+
+inheritance - define subclasses of classes that will capture or inherit behavior of its parent class and potentially modify it
+
+makes it easier for us to write code because we don't have to write the same behavior for every class if we can have it captured in a single clas
+
+class Coordinate(object):
+	<define attributes here>
+
+similar to def, indent code to indicate which statements are part of the class definition
+the word object means that coordinate is an object and inherits all of its attributes
+Coordinate is a subclass of object
+Object is a superclass of Coordinate
+
+data and procedures that "belong" to the class
+
+data attributes 
+
+	- think of data as other objects that make up the class
+
+	- for example, a coordinate is made up of two numbers
+
+procedural attributes (methods)
+
+	- think of methods as functions that only work with this class
+
+	- for example you can define a distance between two coordinate objects but there is no meaning to a distance
+		between two list objects
+
+
+how to create an instance of an object
+special method called __init__ to initialize some data attributes
+
+class Coordinate(object):
+	def __init__(self, x, y):
+		self.x = x
+		self.y = y
+
+(self, ...) <- parameter to refer to an instance of the class
+(..., x, y) <- what data initializes a Coordinate object
+
+this will bind the variables x and y within that instance to the supplied values
+
+class Coordinate(object):
+	def __init__(self, x, y):
+		self.x = x
+		self.y = y
+
+	def distance(self, other):
+		x_diff_sq = (self.x-other.x) ** 2
+		y_diff_sq = (self.y-other.y) ** 2
+		return (x_diff_sq + y_diff_sq) ** 0.5
+
+#	def __str__(self):
+#		return "<" + str(self.x) + "," + str(self.y) + ">"
+#	def __sub__(self, other):
+#		return Coordinate(self.x - other.x, self.y - other.y)
+
+instance variables - data of a class
+
+
+isinstance(c, Coordinate)
+
+Special Operators
+
+Operator Overloading
+
+__add__
+__sub__
+__eq__
+__lt__
+__gt__
+__len__
+__str__
+
+a method is a procedural attribute, its designed for that class
+
+Python always passes the actual object, the instance, as the first argument
+
+The dot operator is used to any attribute, the data attributes (the variable names), but also the method
+
+print(Coordinate.distance(c, origin))
+
+
