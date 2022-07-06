@@ -205,3 +205,63 @@ using the new object type in a class
 
 	- do operations with the same or mixed object types
 
+bundle objects that share
+
+	- common attributes and procedures that operate on those attributes
+
+use abstraction to make a distinction between how to implement an object vs how to use the object
+
+build layers of object abstraction that inherit behaviors from other classes
+
+create our own classes
+
+class is the type
+
+	- a Coordinate type
+
+	- class is defined generically
+
+	- use self to refer to any instance while defining the class
+
+	- class defines data and methods common across all instances
+
+instance is one particular object
+
+mycoo = Coordinate(1, 2)
+
+data varies between instances
+
+c1 = Coordinate(1, 2)
+c2 = Coordinate(3, 4)
+
+c1 and c2 have different data values because they are different objects
+
+instance has the structure of the class
+
+WHY USE OOP and CLASSES OF OBJECTS?
+
+mimic real life
+
+group different objects as part of the same type
+
+- data attributes
+
+	- how can you represent your object with data?
+
+	- (what it is)
+
+	- <for a coordinate, x and y values>
+
+	- for an animal, age and name
+
+
+	- procedural attributes (behaviors/operations/methods)
+
+	- what kinds of things can you do with the object?
+
+	- what it does
+
+	- <for a coordinate: find a distance, derivative, integral, rate of change, area under curve>
+
+	- <2d cartesian plane, 3d cartesian plane, x-y-z-t, ordinary and partial differential equations, matrix algebra>
+
